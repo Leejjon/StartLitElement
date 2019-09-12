@@ -5,12 +5,17 @@
   "repository": "https://github.com/PolymerLabs/start-lit-element.git",
   "main": "start-lit-element.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "polymer serve --port 8082 | npm run watch",
+    "test": "polymer test",
+    "watch": "browser-sync start --proxy localhost:8082 --files \"src/**/*.js\""
   },
   "author": "The Polymer Authors",
   "license": "BSD-3-Clause",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "latest",
     "lit-element": "latest"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1"
   }
 }
